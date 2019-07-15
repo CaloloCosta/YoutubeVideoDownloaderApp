@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Youtube | Video Downloader</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">-->
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <img src="assets/background.png" class="background" alt="background">
+      <header>
+        <h1 class="blue-text"><span class="red-text">YouTube</span> Video Donwloader</h1>
+        <div class="instruction">
+            <ul>
+              <li class="blue-text"><h2 class="red-text">1 </h2>Paste in the video url</li>
+              <li class="blue-text"><h2 class="red-text">2 </h2>Choose the format</li>
+              <li class="blue-text"><h2 class="red-text">3 </h2>Download</p></li>
+            </ul>
+        </div>
+      </header>
+      <div class="form">
+        <form class="" action="index.html" method="post">
+          <div class="in">
+            <input placeholder="Paste in the url..." type="text">
+            <button type="submit" name="button"><img src="assets/arrow.png"></button>
+          </div>
+          <div class="formats">
+            <div><input type="radio" name="format" value="mp4" checked="true" id="mp4"><label for="mp4" class="format">MP4</label></div>
+            <div><input type="radio" name="format" value="webv" id="webv"><label for="webv" class="format">WEBV</label></div>
+            <div><input type="radio" name="format" value="mp3" id="mp3"><label for="mp3" class="format">MP3</label></div>
+          </div>
+        </form>
+      </div>
+      <div class="info">
+        <p>A very simple YouTube video Downloader web app</p>
+        <p>that actually does its job</p>
+        <p>free and with no wierd ads</p>
+      </div>
+      <footer>
+        <p>Developed with love by <strong><a href="#">Carlos da Costa</a></strong></p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/request.js">
+    </script>
+  </body>
+</html>

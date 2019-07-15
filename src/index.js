@@ -2,22 +2,24 @@ const express = require('express')
 const cors = require('cors')
 const ytdl = require('ytdl-core')
 const fs = require('fs')
+const path = require('path')
+
+
 
 const app = express()
 
-app.use(cors())
-
-const PORT = process.env.PORT || 3000
-
-app.get('/download', (req, res) =>{
-  let url = req.query.URL
-  let format = req.query.format
-  let name = 'givenName'
-
-  ytdl(url).pipe(fs.createWriteStream(`${name}.flv`))
-
+ app.get('/download', async (req, res) =>{
+   // audioonly  OR mp4
+   const video = {
+     url: req.query.url,
+     format: req.query.format
+   }
+   ytdl.getBasicInfo(video.url,(err, info) =>{
+    if(err)
+      return error
+      video.format === 'mp4' ? res.attachment(`${info.title}.${video.format}`) : res.attachment(`${info.title}.mp3`)
+  })
+  await ytdl(video.url,{quality: 'highest',filter: video.format === 'mp4' ? (f) => f.container === 'mp4' : 'audioonly'}).pipe(res)
 })
 
-app.listen(PORT, () =>{
-  console.log('App running on port ', PORT)
-})
+app.listen(3000, () => {console.log('App running')})
