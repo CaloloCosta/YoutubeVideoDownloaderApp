@@ -1,12 +1,16 @@
 const express = require('express')
 const cors = require('cors')
 const ytdl = require('ytdl-core')
-const fs = require('fs')
 const path = require('path')
 
-
-
 const app = express()
+
+console.log(path.join(__dirname,'../public'))
+app.use(express.static(path.join(__dirname,'../public')))
+
+app.get('', (req, res) =>{
+  res.render('index')
+})
 
  app.get('/download', async (req, res) =>{
    // audioonly  OR mp4
