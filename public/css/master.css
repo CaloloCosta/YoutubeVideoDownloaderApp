@@ -167,7 +167,8 @@ footer  a{
   .description{
     width: 90vw;
   }
-
+  footer{
+    margin-top: 1rem;}
 }
 
 @media(max-width: 850px){
@@ -217,6 +218,7 @@ footer  a{
   }
 
   footer{
+    margin-top: 1rem;
     width: 100vw;
     text-align: center;
   }
