@@ -151,6 +151,7 @@ footer{
   margin-top: 6rem;
   font-size: 1rem;
   color: rgba(13,13,13,.8);
+  text-align: center;
 }
 
 footer  a{
@@ -166,9 +167,7 @@ footer  a{
   .description{
     width: 90vw;
   }
-  footer{
-    margin-top: 1rem;
-  }
+
 }
 
 @media(max-width: 850px){
@@ -213,8 +212,13 @@ footer  a{
   }
 
   .description{
-    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-size: 1rem;
   }
 
+  footer{
+    width: 100vw;
+    text-align: center;
+  }
 
 }
