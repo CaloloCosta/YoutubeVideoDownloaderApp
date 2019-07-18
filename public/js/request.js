@@ -7,7 +7,7 @@ form.addEventListener('submit', e =>{
   console.log(url,format)
 
   const endPoint = `https://youtubevideodl.herokuapp.com/download?url=${url}&format=${format}`
-  if(!url.includes('www.youtube.com/watch?'))
+  if(!url.includes('youtube.com/watch?'))
     window.alert("Please provida a valid video url...")
   else
     window.location.href = endPoint
