@@ -6,8 +6,10 @@ form.addEventListener('submit', e =>{
   const format = document.querySelector('input[type="radio"]:checked').value
 
   const endPoint = `https://youtubevideodl.herokuapp.com/download?url=${url}&format=${format}`
-  if(!url.includes('youtube.com/watch?'))
-    window.alert("Please provid a valid youtube video url...")
+  if(url.includes('youtube.com/watch?') || url.includes('youtu.be'))
+	window.location.href = endPoint
   else
-    window.location.href = endPoint
+    window.alert("Please provid a valid youtube video url...")
+
+    
 })
