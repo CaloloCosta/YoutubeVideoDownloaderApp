@@ -27,14 +27,14 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0rem 1rem;
   margin: auto;
   height: 100vh;
 
 }
 
 .title{
-  margin-top: 2rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,9 +222,11 @@ footer  a{
   }
 
   footer{
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 100vw;
     text-align: center;
+    position: absolute;
+    bottom: 1px;
   }
 
 }
