@@ -25,7 +25,7 @@ app.get('', (req, res) =>{
       console.log(info)
       video.format === 'mp4' ? res.attachment(`${info.title}.${video.format}`) : res.attachment(`${info.title}.mp3`)
   })
-  await ytdl(video.url,{quality: 'highest',filter: video.format === 'mp4' ? (f) => f.container === 'mp4' : 'audioonly'}).on('progress', p => {console.log(p)}) //.pipe(res)
+  await ytdl(video.url,{quality: 'highest',filter: video.format === 'mp4' ? (f) => f.container === 'mp4' : 'audioonly'}).pipe(res)
 })
 
 app.listen(port, () => {console.log('App running')})
